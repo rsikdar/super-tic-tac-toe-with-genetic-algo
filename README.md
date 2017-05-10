@@ -14,6 +14,7 @@ If a move is played so that it is to win a local board by the rules of normal ti
 ## Computability
 
 Search space analysis of super tic-tac-toe:
+
 The first move of the game has 81 different possibilities. After that the moves are constrained to a single board. There will be 8 boards (the first board has one filled in already) that have 9 choices when you first arrive. After that there will 9 board with 8 choices, 9 with 7 choices, 9 with 6, etc, until you are forced to move in the last spot. So at the beginning of the game there will be: 81*9^8*8^9*7^9*6^9*5^9*4^9*3^9*2^9 = 9.8*10^50 ways to randomly fill in the whole board. Many paths will win the game early, so the actual search space will be less than this, but as you can see the number would still be way to big to brute force.
 
 Taken from Khan Academy: https://www.khanacademy.org/computer-programming/tic-tac-toe-ception/1676336506

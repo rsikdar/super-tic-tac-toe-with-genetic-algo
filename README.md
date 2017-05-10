@@ -1,4 +1,4 @@
-# super-tic-tac-toe-with-genetic-algo
+# Super-tic-tac-toe-with-genetic-algo
 Developing strategies for super tic-tac-toe using genetic algorithms (DEAP library).
 
 
@@ -29,3 +29,12 @@ There are 4 strategies implemented:
 
     Each individual is given 81 features. Each feature corresponds to a different box. For each turn, we evaluate all valid moves and pick the one with the highest weight. This idea was inspired from a paper on using genetic algorithms for playing Othello: http://www.genetic-programming.org/sp2003/Cunningham.pdf. I originally expected this strategy to perform poorly, as it doesn't take into account the game state at any point. However, this strategy was able to achieve a win rate of 0.79 wins, 0.16 losses, and 0.05 ties against a randomized_strategy over 100 games, and won all 100 games against the Monte Carlo algorithm. Initially, the trained algorithm performed poorly. By raising the mutation rate from 0.1 to 0.4, the results drastically improved. This is most likley because the inital population sample was quite small, and there weren't enough variety in values to achieve good results through mating and selection alone. The picture below has a colored diagrams of the trained weights. While some symmetric points do have similar weight values, many don't. This might be due to only running 40 generations with a population of 25, due to computation limits. If ran for longer, I would expect points that are rotations of each other to have similar weights.
   ![Alt text](/weighted_pos.JPG?raw=true "Weighted Positions")
+* Weighted Heuristic Algorithm
+
+    I developed three heuristics, and trained 3 features that represented the importance of each heuristic. The first heuristic ranked all valid moves by the amount of different moves the opposing player would have. The second ranked all valid moves by whether they would end the game, and who the winner would be. The third heuristic ranked all valid moves by whether or not the move was in the same position on the local board as was the local board to the big board ex. middle box in the middle local board. A sample training of these weights was [0.5481969638432325, 1.1622564564783708, 0.08596681111602267]. This strategy had slightly lower win rates against a randomized strategy; 0.76 wins, 0.08 Losses, 0.16 Ties. Against the monte carlo strategy it performed almost identically, with 0.98 wins 0 losses, and 0.02 ties. I originally expected this strategy to work better than the other algorithm, as it utilizes the game state before making decisions. 
+    
+## Competing the genetic algorithm structures against each other
+
+
+
+

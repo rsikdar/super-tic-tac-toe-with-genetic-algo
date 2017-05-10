@@ -24,7 +24,7 @@ There are 4 strategies implemented:
 * A randomized strategy that give a game state, picks from all valid moves with equal probability. 
 * Monte Carlo Algorithm
 
-    Every turn, for every valid move, we play out 5 games from the current state against a random strategy. Each game is scored by its win, loss, tie, and the number of steps it took to finish the game. The idea behind this is that too prefer games that let us win sooner, and wins over ties over losses.
+    Every turn, for every valid move we play out 5 games from the current state against a random strategy. Each game is scored by its win, loss, tie, and the number of steps it took to finish the game. The idea behind this is that too prefer games that let us win sooner, and wins over ties over losses.
     The Monte Carlo plays extremely well against a randomized strategy, although it takes sometime to run. It's win-rate over a 100 games was 0.88 wins, 0.01 losses, and 0.11 ties. Because of this, for testing our genetic algorithms we train on the randomized strategy and do final evaluation on both a randomized strategy as well as a Monte Carlo strategy.
 * Weighted Positions Genetic Algorithm 
 

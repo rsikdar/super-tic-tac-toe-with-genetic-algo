@@ -34,8 +34,9 @@ There are 4 strategies implemented:
 
     I developed three heuristics, and trained 3 features that represented the importance of each heuristic. The first heuristic ranked all valid moves by the amount of different moves the opposing player would have. The second ranked all valid moves by whether they would end the game, and who the winner would be. The third heuristic ranked all valid moves by whether or not the move was in the same position on the local board as was the local board to the big board ex. middle box in the middle local board. A sample training of these weights was [0.5481969638432325, 1.1622564564783708, 0.08596681111602267]. This strategy had slightly lower win rates against a randomized strategy; 0.76 wins, 0.08 Losses, 0.16 Ties. Against the monte carlo strategy it performed almost identically, with 0.98 wins 0 losses, and 0.02 ties. I originally expected this strategy to work better than the other algorithm, as it utilizes the game state before making decisions. 
     
-## Competing the genetic algorithm structures against each other
+## Competing the genetic algorithm structures against each other, and the importance of going first
 
+Over a 100 games, the weighted positions strategy won all games it went first, and tied all 100 games when it went second.
 
 
 

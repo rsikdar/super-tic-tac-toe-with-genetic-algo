@@ -36,7 +36,14 @@ There are 4 strategies implemented:
     
 ## Competing the genetic algorithm structures against each other, and the importance of going first
 
-Over a 100 games, the weighted positions strategy won all games it went first, and tied all 100 games when it went second.
+Over a 100 games, the weighted positions strategy won all games it went first, and tied all 100 games when it went second. While the win_rates against the other strategies weren't too different, weighted strategies performed significantly better. The difference being able to not win a single game however while going second suggests the idea that the weights are based on the opening gambit. The strategy will always make the same opening move in all situations. Once the strategy is not able to force the opponent into a set options of move, its ability to win diminishes significantly. To test this, I then ran both trained strategies against a randomized strategy and monte carlo, but with the genetic algorithms as second:
+
+
+One way to train against overfitting to the turn is by having the genetic algorithms not pick the highest move, but pick each move according to probabiliy of their weights. Another option would be to randomize whether it is player 1 or player 2 during training. Due to the time constraints, I did not get around to testing these ideas. 
+
+## Future Improvements
+
+A found a paper that analyzed the structure of the game and discusses formalizing and reducing it to other problems(Group Actions on Winning Games of Super Tic-Tac-Toe: https://arxiv.org/pdf/1606.04779.pdf). However, I came across the paper pretty late, and didn't have time to implement the ideas of reducing the total number of states to rotations and reflections of other states. I think this would have helped greatly in both genetic algorithms, and could lead to new heuristic functions that better capture the game state.  
 
 
 

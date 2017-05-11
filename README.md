@@ -43,7 +43,7 @@ One way to train against overfitting to the turn is by having the genetic algori
 
 ## Future Improvements
 
-A found a paper that analyzed the structure of the game and discusses formalizing and reducing it to other problems(Group Actions on Winning Games of Super Tic-Tac-Toe: https://arxiv.org/pdf/1606.04779.pdf). However, I came across the paper pretty late, and didn't have time to implement the ideas of reducing the total number of states to rotations and reflections of other states. I think this would have helped greatly in both genetic algorithms, and could lead to new heuristic functions that better capture the game state.  
+A found a paper that analyzed the structure of the game and discusses formalizing and reducing it to other problems (Group Actions on Winning Games of Super Tic-Tac-Toe: https://arxiv.org/pdf/1606.04779.pdf). However, I came across the paper pretty late, and didn't have time to implement the ideas of reducing the total number of states to rotations and reflections of other states. I think this would have helped greatly in both genetic algorithms, and could lead to new heuristic functions that better capture the game state.  
 
 
 

@@ -38,6 +38,23 @@ There are 4 strategies implemented:
 
 Over a 100 games, the weighted positions strategy won all games it went first, and tied all 100 games when it went second. While the win_rates against the other strategies weren't too different, weighted strategies performed significantly better. The difference being able to not win a single game however while going second suggests the idea that the weights are based on the opening gambit. The strategy will always make the same opening move in all situations. Once the strategy is not able to force the opponent into a set options of move, its ability to win diminishes significantly. To test this, I then ran both trained strategies against a randomized strategy and monte carlo, but with the genetic algorithms as second:
 
+Random  vs Weighted Heuristic
+
+P1 - Wins: 0.000000, Losses: 0.000000, Ties: 1.000000
+
+Random vs Weighted Positions
+
+P1 - Wins: 0.290000, Losses: 0.620000, Ties: 0.090000
+
+Monte Carlo  vs Weighted Heuristic
+
+P1 - Wins: 0.450000, Losses: 0.220000, Ties: 0.330000
+
+Monte Carlo  vs Positions
+
+P1 - Wins: 0.800000, Losses: 0.070000, Ties: 0.130000
+
+Weighted positions strategy did extremeley poorly when going second against Monte Carlo, and did worse than weighted heuristics in both cases. This is in line with how it did significantly worse when it went second against the weighted heuristics. This suggests that it is overfitted for going first, and that is weighted heuristics is better as a general solution.
 
 One way to train against overfitting to the turn is by having the genetic algorithms not pick the highest move, but pick each move according to probabiliy of their weights. Another option would be to randomize whether it is player 1 or player 2 during training. Due to the time constraints, I did not get around to testing these ideas. 
 

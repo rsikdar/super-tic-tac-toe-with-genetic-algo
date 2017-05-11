@@ -50,7 +50,7 @@ Monte Carlo - Wins: 0.450000, Losses: 0.220000, Ties: 0.330000
 Monte Carlo  vs Weighted Positions  
 Monte Carlo - Wins: 0.800000, Losses: 0.070000, Ties: 0.130000
 
-Weighted positions strategy did extremeley poorly when going second against Monte Carlo, and did worse than weighted heuristics in both cases. This is in line with how it did significantly worse when it went second against the weighted heuristics. This suggests that it is overfitted for going first, and that is weighted heuristics is better as a general solution.
+Weighted positions strategy did extremeley poorly when going second against Monte Carlo, and did worse than weighted heuristics in both cases. This is in line with how it did significantly worse when it went second against the weighted heuristics. This suggests that weighted positions is overfitted for going first, and that weighted heuristics is better as a general solution.
 
 One way to train against overfitting to the turn is by having the genetic algorithms not pick the highest move, but pick each move according to probabiliy of their weights. Another option would be to randomize whether it is player 1 or player 2 during training. Due to the time constraints, I did not get around to testing these ideas. 
 
